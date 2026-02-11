@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Lectures</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Mes Lectures</h1>
+            <p class="subtitle">Suivez votre progression littéraire</p>
+        </header>
+
+        <main class="main-content">
+            <!-- Formulaire d'ajout -->
+            <section class="add-book-section">
+                <div class="card">
+                    <h2>Ajouter un livre</h2>
+                    <form id="bookForm" class="book-form">
+                        <div class="form-group">
+                            <label for="title">Titre du livre</label>
+                            <input type="text" id="title" name="title" required placeholder="Ex: Le Petit Prince">
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Auteur</label>
+                            <input type="text" id="author" name="author" required placeholder="Ex: Antoine de Saint-Exupéry">
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <span class="btn-icon">+</span>
+                            Ajouter à ma liste
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Filtres -->
+            <section class="filters-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        Tous les livres
+                    </button>
+                    <button class="filter-btn" data-filter="to-read">
+                        À lire
+                    </button>
+                    <button class="filter-btn" data-filter="reading">
+                        En cours
+                    </button>
+                    <button class="filter-btn" data-filter="completed">
+                        Terminés
+                    </button>
+                </div>
+            </section>
+
+            <!-- Liste des livres -->
+            <section class="books-section">
+                <div id="booksList" class="books-grid">
+                    <!-- Les livres seront ajoutés ici dynamiquement -->
+                </div>
+                
+                <div id="emptyState" class="empty-state">
+                    <h3>Aucun livre pour le moment</h3>
+                    <p>Commencez par ajouter votre premier livre ci-dessus !</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
